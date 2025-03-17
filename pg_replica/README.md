@@ -1,4 +1,4 @@
-# Postgres Replica
+# insurgate/pg-replica
 
 This is a simple Docker image for a Postgres replica.
 
