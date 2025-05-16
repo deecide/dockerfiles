@@ -9,3 +9,9 @@ On first run, it will initialize the data directory with `pg_basebackup`.
 ```bash
 docker run -d --name pg-replica -e POSTGRES_HOST=primary-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=mydb -v /path/to/replica/data:/var/lib/postgresql/data insurgate/pg-replica
 ```
+
+## Build
+
+```bash
+docker build . -t insurgate/pg-replica --platform linux/amd64 --push
+```

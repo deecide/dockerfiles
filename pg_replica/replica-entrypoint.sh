@@ -17,4 +17,6 @@ fi
 exec docker-entrypoint.sh postgres \
   -c "primary_conninfo=host=$POSTGRES_HOST port=5432 user=$POSTGRES_USER password=$POSTGRES_PASSWORD dbname=$POSTGRES_DB" \
   -c "primary_slot_name=replica_1" \
-  -c "hot_standby=on"
+  -c "hot_standby=on" \
+  -c "max_standby_archive_delay=300s" \
+  -c "max_standby_streaming_delay=300s"
